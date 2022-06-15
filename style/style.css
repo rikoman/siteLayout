@@ -1,0 +1,394 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------*/
+.head {
+  background: #73b83a;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 80px;
+  z-index: 3;
+}
+
+.head_body {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.head_logo {
+  font-size: 24px;
+}
+
+.head_nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.head_link {
+  margin-left: 20px;
+}
+
+.main {
+  background-color: #bbb3b3;
+  padding-top: 1px;
+  min-height: 700px;
+}
+
+.main_body {
+  margin-top: 80px;
+  padding-top: 30px;
+}
+
+.main_img {
+  width: 200px;
+  height: 200px;
+  background-color: aliceblue;
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.main_text {
+  font-size: 16px;
+  line-height: 1.6em;
+}
+
+.main_text h1 {
+  font-size: 24px;
+}
+
+.main_text p {
+  margin-top: 20px;
+  text-align: justify;
+}
+
+.slider {
+  padding-top: 80px;
+  height: 600px;
+  background-color: #a5a5a5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.slider_body {
+  width: 100%;
+  height: 80%;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.slider_container {
+  width: 450px;
+  border: 2px solid black;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.slider_block {
+  width: 1500px;
+  height: 150px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  left: 0;
+  -webkit-transition: all ease 0.8s;
+  transition: all ease 0.8s;
+}
+
+.slider_items {
+  width: 150px;
+  background-color: #221a1a;
+  height: 150px;
+}
+
+.slider_buts {
+  margin-top: 20px;
+}
+
+.slider_prev {
+  width: 150px;
+  height: 50px;
+  background: yellow;
+  font-size: 24px;
+  border-radius: 30px;
+  border: 1px solid black;
+}
+
+.slider_next {
+  width: 150px;
+  height: 50px;
+  background: yellow;
+  font-size: 24px;
+  border-radius: 30px;
+  border: 1px solid black;
+}
+
+.slider_next:hover {
+  background-color: #e06831;
+}
+
+.slider_prev:hover {
+  background-color: #e06831;
+}
+
+.head_burger {
+  display: none;
+  height: 100%;
+  line-height: 18px;
+  font-size: 180px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 756px) {
+  .container {
+    width: 90%;
+  }
+  .main {
+    padding-bottom: 30px;
+  }
+  .head_nav {
+    display: none;
+  }
+  .head_burger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.head_popup {
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+  min-height: 100%;
+  top: -100%;
+  left: 0%;
+  background-color: rgba(0, 0, 0, 0.95);
+  text-align: center;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+
+.head_popup a {
+  color: white;
+}
+
+.head_popup.active {
+  opacity: 1;
+  visibility: visible;
+  top: 80px;
+}
+
+.popup_link {
+  margin: 30px 20px;
+  font-size: 24px;
+  color: white;
+}
+
+@media (min-width: 757px) {
+  .head_popup {
+    opacity: 0;
+    visibility: hidden;
+  }
+  .head_popup.active {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.slider_new {
+  height: 600px;
+  background-color: #f73939;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.new_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  position: relative;
+  height: 80%;
+}
+
+.new_container svg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.continent {
+  fill: none;
+  stroke: black;
+  stroke-width: 5px;
+  cursor: pointer;
+  pointer-events: all;
+}
+
+.continent:hover {
+  -webkit-animation: aaa 2s linear infinite;
+          animation: aaa 2s linear infinite;
+}
+
+@-webkit-keyframes aaa {
+  0% {
+    stroke: black;
+  }
+  50% {
+    stroke: red;
+  }
+  100% {
+    stroke: black;
+  }
+}
+
+@keyframes aaa {
+  0% {
+    stroke: black;
+  }
+  50% {
+    stroke: red;
+  }
+  100% {
+    stroke: black;
+  }
+}
+
+.tooltip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 5px;
+  background: #fff;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  display: none;
+}
+/*# sourceMappingURL=style.css.map */
